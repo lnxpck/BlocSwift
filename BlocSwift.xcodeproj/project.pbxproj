@@ -16,7 +16,6 @@
 		CDF565272452262C00B06317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF565252452262C00B06317 /* LaunchScreen.storyboard */; };
 		CDF565322452262C00B06317 /* BlocSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF565312452262C00B06317 /* BlocSwiftTests.swift */; };
 		CDF565402452275600B06317 /* CounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF5653F2452275600B06317 /* CounterManager.swift */; };
-		CDF565422452365C00B06317 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF565412452365C00B06317 /* SecondViewController.swift */; };
 		CDF56544245243B400B06317 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF56543245243B400B06317 /* FirstViewController.swift */; };
 		CDF565462452493A00B06317 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDF565452452493900B06317 /* README.md */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,6 @@
 		CDF565312452262C00B06317 /* BlocSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocSwiftTests.swift; sourceTree = "<group>"; };
 		CDF565332452262C00B06317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF5653F2452275600B06317 /* CounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterManager.swift; sourceTree = "<group>"; };
-		CDF565412452365C00B06317 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CDF56543245243B400B06317 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CDF565452452493900B06317 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +120,6 @@
 				CDF5651C2452262A00B06317 /* SceneDelegate.swift */,
 				CDF5653C2452270600B06317 /* Manager */,
 				CDF56543245243B400B06317 /* FirstViewController.swift */,
-				CDF565412452365C00B06317 /* SecondViewController.swift */,
 				CDF565202452262A00B06317 /* Main.storyboard */,
 				CDF565232452262C00B06317 /* Assets.xcassets */,
 				CDF565252452262C00B06317 /* LaunchScreen.storyboard */,
@@ -317,7 +314,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF565422452365C00B06317 /* SecondViewController.swift in Sources */,
 				CDF565402452275600B06317 /* CounterManager.swift in Sources */,
 				CDF56544245243B400B06317 /* FirstViewController.swift in Sources */,
 				CDF5651B2452262A00B06317 /* AppDelegate.swift in Sources */,

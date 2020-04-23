@@ -9,6 +9,9 @@
 import UIKit
 import RxSwift
 
+// Declare as global
+let counterManager = CounterManager()
+
 class FirstViewController: UIViewController {
 
     let bag = DisposeBag()
@@ -81,33 +84,29 @@ class FirstViewController: UIViewController {
         decBtn.topAnchor.constraint(equalTo: incBtn.bottomAnchor, constant: 40).isActive = true
         decBtn.addTarget(self, action: #selector(onDecrementer), for: .touchUpInside)
         
-        let openBtn = UIButton()
-        view.addSubview(openBtn)
-
-        openBtn.setTitle("Open second page", for: .normal)
-        openBtn.setTitleColor(.white, for: .normal)
-        openBtn.backgroundColor = .purple
-        openBtn.translatesAutoresizingMaskIntoConstraints = false
-        openBtn.widthAnchor.constraint(equalToConstant: 170).isActive = true
-        openBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        openBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        openBtn.topAnchor.constraint(equalTo: decBtn.bottomAnchor, constant: 40).isActive = true
-        openBtn.addTarget(self, action: #selector(onOpen), for: .touchUpInside)
+        let resetBtn = UIButton()
+        view.addSubview(resetBtn)
+        
+        resetBtn.setTitle("reset to 5", for: .normal)
+        resetBtn.setTitleColor(.white, for: .normal)
+        resetBtn.backgroundColor = .purple
+        resetBtn.translatesAutoresizingMaskIntoConstraints = false
+        resetBtn.widthAnchor.constraint(equalToConstant: 110).isActive = true
+        resetBtn.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        resetBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        resetBtn.topAnchor.constraint(equalTo: decBtn.bottomAnchor, constant: 40).isActive = true
+        resetBtn.addTarget(self, action: #selector(onReset), for: .touchUpInside)
     }
 
     @objc func onIncrementer() {
         counterManager.input.onNext(.IncrementEvent)
     }
 
-    @objc func onDecrementer() {
-        counterManager.input.onNext(.DecrementEvent)
+    @objc func onReset() {
+        counterManager.input.onNext(.resetEvent(value: 5))
     }
     
-    @objc func onOpen() {
-        let vc = SecondViewController()
-        let nvc = UINavigationController(rootViewController: vc)
-        nvc.isNavigationBarHidden = true
-        nvc.modalPresentationStyle = .fullScreen
-        self.present(nvc, animated: true, completion: nil)
+    @objc func onDecrementer() {
+        counterManager.input.onNext(.DecrementEvent)
     }
 }
