@@ -9,6 +9,9 @@
 import UIKit
 import RxSwift
 
+/* Declare as global */
+let counterManager = CounterManager()
+
 class FirstViewController: UIViewController {
 
     let bag = DisposeBag()
